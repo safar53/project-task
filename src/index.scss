@@ -4,6 +4,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #666;
 }
 
 code {
@@ -22,8 +23,7 @@ code {
 
 .container {
   width: 100vw;
-  background-color: #666;
-  padding: 20px;
+  padding: 50px;
   font-size: 30px;
 
   ul {
@@ -41,49 +41,10 @@ code {
         user-select: none;
         position: relative;
         line-height: 1em;
-
-        &::before,
-        &::after {
-          content: "";
-          width: 0.5em;
-          height: 1px;
-          position: absolute;
-          top: calc(0.5em - 1px);
-          left: calc(-0.5em - 1px);
-          background-color: #000;
-        }
-        &::after {
-          left: calc(-0.5em - 1px);
-          top: -0.33em;
-          width: 1px;
-          height: 1.66em;
-        }
-      }
-      &:first-child {
-        label {
-          &::after {
-            height: 0.83em;
-            top: 50%;
-          }
-        }
-      }
-      &:last-child {
-        label {
-          &::after {
-            height: 0.83em;
-            bottom: 50%;
-          }
-        }
-        &:only-child {
-          label {
-            &::after {
-              height: 0px;
-              top: 0;
-              bottom: 0;
-            }
-          }
-        }
       }
     }
   }
+}
+label + ul {
+  margin-left: 30px;
 }
